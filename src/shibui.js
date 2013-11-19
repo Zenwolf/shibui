@@ -40,12 +40,12 @@
     }
 
     /**
-     * Assign an an object to a package.
+     * Assign an object to a package.
      *
      * Example:
      *   var package = 'foo.Zot';
      *   var obj = Zot;
-     *   assignObj(path, obj);
+     *   assignObj(package, obj);
      */
     function assignObj(path, obj, root) {
         var levels = path.split('.');
@@ -119,6 +119,5 @@
     module.mod           = mod;
 
     // Define this module's package and bootstrap itself so others can use it.
-    definePackage('shibui', root);
     root['shibui'] = module;
 } (this));
